@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
     paths:
       - Syn2Controller.Windows/**
-      - .github/dotnet-winforms.yaml
+      - .github/dotnet-winforms.yml
   pull_request:
     branches: [ "main" ]
 
