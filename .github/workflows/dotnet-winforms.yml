@@ -27,7 +27,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.5
 
     - name: Restore Packages
-      run: nuget restore Syn2Controller.Windows\Syn2Controller.Windows.csproj
+      run: nuget restore Syn2Controller.Windows\Syn2Controller.Windows.csproj -SolutionDirectory .\
 
     - name: Build
       run: msbuild Syn2Controller.Windows\Syn2Controller.Windows.csproj /nologo /p:Configuration=Release /t:Clean
