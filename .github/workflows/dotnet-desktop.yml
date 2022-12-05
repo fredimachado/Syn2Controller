@@ -36,7 +36,7 @@ jobs:
     #  run: dotnet test
 
     - name: Install MAUI Workflow
-      run: dotnet workload install maui
+      run: dotnet workload install maui-windows
       
     - name: Build
       run: dotnet publish .\Syn2Controller\Syn2Controller.csproj -c Release -f:net7.0-windows10.0.19041.0 -p:WindowsPackageType=None
