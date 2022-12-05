@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Syn2Controller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Picker
+                x:Name="midiDevice"
+                Title="Select MIDI Device"
+                SelectedIndexChanged="midiDevice_SelectedIndexChanged"
+                HorizontalOptions="Center">
+            </Picker>
+
+            <Button
+                Text="Channel 1A"
+                SemanticProperties.Hint="Select channel 1A"
+                Clicked="OnChannel1AClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Channel 1B"
+                SemanticProperties.Hint="Select channel 1B"
+                Clicked="OnChannel1BClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Channel 2A"
+                SemanticProperties.Hint="Select channel 2A"
+                Clicked="OnChannel2AClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Channel 2B"
+                SemanticProperties.Hint="Select channel 2B"
+                Clicked="OnChannel2BClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Bypass"
+                Clicked="OnBypassClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Mute"
+                Clicked="OnMuteClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
