@@ -3,6 +3,8 @@ name: SYN2 Controller Desktop
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - Syn2Controller/**
   pull_request:
     branches: [ "main" ]
 

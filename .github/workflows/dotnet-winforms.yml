@@ -3,6 +3,8 @@ name: SYN2 Controller Windows Forms
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - Syn2Controller.WinForms/**
   pull_request:
     branches: [ "main" ]
 
