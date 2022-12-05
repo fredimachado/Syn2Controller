@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syn2Controller", "Syn2Controller\Syn2Controller.csproj", "{CCF32EA0-447E-4237-92FD-B33E23F2E75D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syn2Controller.WinForms", "Syn2Controller.WinForms\Syn2Controller.WinForms.csproj", "{205AA5F2-90B0-4965-8EB3-9963AC940BEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{CCF32EA0-447E-4237-92FD-B33E23F2E75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCF32EA0-447E-4237-92FD-B33E23F2E75D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CCF32EA0-447E-4237-92FD-B33E23F2E75D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{205AA5F2-90B0-4965-8EB3-9963AC940BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205AA5F2-90B0-4965-8EB3-9963AC940BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205AA5F2-90B0-4965-8EB3-9963AC940BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205AA5F2-90B0-4965-8EB3-9963AC940BEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
