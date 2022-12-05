@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - Syn2Controller.WinForms/**
+      - Syn2Controller.Windows/**
   pull_request:
     branches: [ "main" ]
 
@@ -12,8 +12,7 @@ jobs:
 
   build:
 
-    runs-on: windows-latest  # For a list of available runner types, refer to
-                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: windows-latest
 
     steps:
     - name: Checkout
@@ -21,16 +20,25 @@ jobs:
       with:
         fetch-depth: 0
 
-    # Install the .NET Core workload
-    - name: Install .NET Core
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 7.0.x
-      
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+
+    - name: Restore Packages
+      run: nuget restore Syn2Controller.Windows\Syn2Controller.Windows.csproj
+
     - name: Build
-      run: dotnet publish .\Syn2Controller.WinForms\Syn2Controller.WinForms.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained true
+      run: msbuild Syn2Controller.Windows\Syn2Controller.Windows.csproj /nologo /p:Configuration=Release /t:Clean
+      shell: pwsh
+
+    - name: Build
+      run: msbuild Syn2Controller.Windows\Syn2Controller.Windows.csproj /nologo /p:platform="Any CPU" /p:Configuration=Release /t:Build /p:OutputPath=..\artifacts
+      shell: pwsh
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3.1.0
       with:
-        path: .\Syn2Controller.WinForms\bin\Release\net7.0-windows\win-x64\publish\
+        name: windows
+        path: .\artifacts\
