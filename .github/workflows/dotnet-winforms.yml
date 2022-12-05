@@ -1,0 +1,34 @@
+name: SYN2 Controller Windows Forms
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+      
+    - name: Build
+      run: dotnet publish .\Syn2Controller.WinForms\Syn2Controller.WinForms.csproj -c Release -p:PublishSingleFile=true -r win-x64 --self-contained true
+    
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        path: .\Syn2Controller.WinForms\bin\Release\net7.0-windows\win-x64\publish\
