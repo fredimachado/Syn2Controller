@@ -40,14 +40,8 @@ jobs:
       
     - name: Build
       run: dotnet publish .\Syn2Controller\Syn2Controller.csproj -c Release -f:net7.0-windows10.0.19041.0 -p:WindowsPackageType=None
-
-    - uses: vimtor/action-zip@v1
-      with:
-        files: .\Syn2Controller\bin\Release\net7.0-windows10.0.19041.0\win10-x64\publish\
-        recursive: true
-        dest: Syn2Controller.zip
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3.1.0
       with:
-        path: Syn2Controller.zip
+        path: .\Syn2Controller\bin\Release\net7.0-windows10.0.19041.0\win10-x64\publish\
