@@ -4,7 +4,7 @@ namespace Syn2Controller.WinForms
 {
     internal static class Midi
     {
-        private static MidiOut MidiOut;
+        private static MidiOut? MidiOut;
         public static int DeviceIndex = -1;
 
         public static Dictionary<int, string> GetDevices()
@@ -25,7 +25,7 @@ namespace Syn2Controller.WinForms
                 return;
             }
 
-            MidiOut?.Dispose();
+            DisposeDevice();
 
             DeviceIndex = index;
             MidiOut = new MidiOut(index);
@@ -33,7 +33,7 @@ namespace Syn2Controller.WinForms
 
         public static MidiCommandResult SendCommand(int cc)
         {
-            if (Midi.MidiOut is null)
+            if (MidiOut is null)
             {
                 return MidiCommandResult.Error("No MIDI device selected.");
             }
@@ -42,6 +42,11 @@ namespace Syn2Controller.WinForms
             MidiOut.Send(ccEvent.GetAsShortMessage());
 
             return MidiCommandResult.Ok();
+        }
+
+        public static void DisposeDevice()
+        {
+            MidiOut?.Dispose();
         }
     }
 

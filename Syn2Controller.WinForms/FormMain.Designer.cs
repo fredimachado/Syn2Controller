@@ -73,68 +73,86 @@
             // 
             // MuteButton
             // 
+            this.MuteButton.BackColor = System.Drawing.Color.Black;
             this.MuteButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MuteButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MuteButton.ForeColor = System.Drawing.Color.White;
             this.MuteButton.Location = new System.Drawing.Point(73, 603);
             this.MuteButton.Name = "MuteButton";
             this.MuteButton.Size = new System.Drawing.Size(315, 80);
             this.MuteButton.TabIndex = 0;
             this.MuteButton.Text = "Mute";
-            this.MuteButton.UseVisualStyleBackColor = true;
+            this.MuteButton.UseVisualStyleBackColor = false;
             this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click);
             // 
             // BypassButton
             // 
+            this.BypassButton.BackColor = System.Drawing.Color.Black;
             this.BypassButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BypassButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BypassButton.ForeColor = System.Drawing.Color.White;
             this.BypassButton.Location = new System.Drawing.Point(73, 517);
             this.BypassButton.Name = "BypassButton";
             this.BypassButton.Size = new System.Drawing.Size(315, 80);
             this.BypassButton.TabIndex = 0;
             this.BypassButton.Text = "Bypass";
-            this.BypassButton.UseVisualStyleBackColor = true;
+            this.BypassButton.UseVisualStyleBackColor = false;
             this.BypassButton.Click += new System.EventHandler(this.BypassButton_Click);
             // 
             // Channel2BButton
             // 
+            this.Channel2BButton.BackColor = System.Drawing.Color.Black;
             this.Channel2BButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Channel2BButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Channel2BButton.ForeColor = System.Drawing.Color.White;
             this.Channel2BButton.Location = new System.Drawing.Point(73, 431);
             this.Channel2BButton.Name = "Channel2BButton";
             this.Channel2BButton.Size = new System.Drawing.Size(315, 80);
             this.Channel2BButton.TabIndex = 0;
             this.Channel2BButton.Text = "Channel 2B";
-            this.Channel2BButton.UseVisualStyleBackColor = true;
+            this.Channel2BButton.UseVisualStyleBackColor = false;
             this.Channel2BButton.Click += new System.EventHandler(this.Channel2BButton_Click);
             // 
             // Channel2AButton
             // 
+            this.Channel2AButton.BackColor = System.Drawing.Color.Black;
             this.Channel2AButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Channel2AButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Channel2AButton.ForeColor = System.Drawing.Color.White;
             this.Channel2AButton.Location = new System.Drawing.Point(73, 345);
             this.Channel2AButton.Name = "Channel2AButton";
             this.Channel2AButton.Size = new System.Drawing.Size(315, 80);
             this.Channel2AButton.TabIndex = 0;
             this.Channel2AButton.Text = "Channel 2A";
-            this.Channel2AButton.UseVisualStyleBackColor = true;
+            this.Channel2AButton.UseVisualStyleBackColor = false;
             this.Channel2AButton.Click += new System.EventHandler(this.Channel2AButton_Click);
             // 
             // Channel1BButton
             // 
+            this.Channel1BButton.BackColor = System.Drawing.Color.Black;
             this.Channel1BButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Channel1BButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Channel1BButton.ForeColor = System.Drawing.Color.White;
             this.Channel1BButton.Location = new System.Drawing.Point(73, 259);
             this.Channel1BButton.Name = "Channel1BButton";
             this.Channel1BButton.Size = new System.Drawing.Size(315, 80);
             this.Channel1BButton.TabIndex = 0;
             this.Channel1BButton.Text = "Channel 1B";
-            this.Channel1BButton.UseVisualStyleBackColor = true;
+            this.Channel1BButton.UseVisualStyleBackColor = false;
             this.Channel1BButton.Click += new System.EventHandler(this.Channel1BButton_Click);
             // 
             // Channel1AButton
             // 
+            this.Channel1AButton.BackColor = System.Drawing.Color.Black;
             this.Channel1AButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Channel1AButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Channel1AButton.ForeColor = System.Drawing.Color.White;
             this.Channel1AButton.Location = new System.Drawing.Point(73, 153);
             this.Channel1AButton.Name = "Channel1AButton";
             this.Channel1AButton.Size = new System.Drawing.Size(315, 100);
             this.Channel1AButton.TabIndex = 0;
             this.Channel1AButton.Text = "Channel 1A";
-            this.Channel1AButton.UseVisualStyleBackColor = true;
+            this.Channel1AButton.UseVisualStyleBackColor = false;
             this.Channel1AButton.Click += new System.EventHandler(this.Channel1AButton_Click);
             // 
             // label1
@@ -166,11 +184,18 @@
             // 
             // DevicesCombo
             // 
+            this.DevicesCombo.BackColor = System.Drawing.Color.Black;
             this.DevicesCombo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DevicesCombo.DropDownHeight = 200;
+            this.DevicesCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DevicesCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DevicesCombo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DevicesCombo.ForeColor = System.Drawing.Color.White;
             this.DevicesCombo.FormattingEnabled = true;
+            this.DevicesCombo.IntegralHeight = false;
             this.DevicesCombo.Location = new System.Drawing.Point(73, 93);
             this.DevicesCombo.Name = "DevicesCombo";
-            this.DevicesCombo.Size = new System.Drawing.Size(315, 33);
+            this.DevicesCombo.Size = new System.Drawing.Size(315, 36);
             this.DevicesCombo.TabIndex = 3;
             this.DevicesCombo.SelectedIndexChanged += new System.EventHandler(this.DevicesCombo_SelectedIndexChanged);
             // 
@@ -178,11 +203,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(461, 791);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormMain";
             this.Text = "Synergy SYN2 Controller";
             this.Activated += new System.EventHandler(this.FormMain_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
+            this.LocationChanged += new System.EventHandler(this.FormMain_LocationChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -50,7 +50,22 @@ namespace Syn2Controller.WinForms
             Midi.SetMidiDevice(DevicesCombo.SelectedIndex);
         }
 
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Midi.DisposeDevice();
+        }
+
         private void FormMain_Activated(object sender, EventArgs e)
+        {
+            CheckDevice();
+        }
+
+        private void FormMain_LocationChanged(object sender, EventArgs e)
+        {
+            CheckDevice();
+        }
+
+        private void CheckDevice()
         {
             if (DevicesCombo.SelectedIndex != Midi.DeviceIndex)
             {

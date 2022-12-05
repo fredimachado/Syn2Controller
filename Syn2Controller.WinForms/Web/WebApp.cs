@@ -7,7 +7,7 @@ internal static class WebApp
 {
     public static WebApplication Build()
     {
-        var builder = WebApplication.CreateBuilder(new[] { "--urls", "http://localhost:5050" });
+        var builder = WebApplication.CreateBuilder(new[] { "--urls", "http://localhost:5050;http://0.0.0.0:5050" });
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
