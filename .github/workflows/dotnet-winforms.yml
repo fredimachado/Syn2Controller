@@ -6,6 +6,9 @@ on:
     paths:
       - Syn2Controller.Windows/**
       - .github/workflows/dotnet-winforms.yml
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-preview.[0-9]+"
   pull_request:
     branches: [ "main" ]
 
