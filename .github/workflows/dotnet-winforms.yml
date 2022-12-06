@@ -37,6 +37,22 @@ jobs:
     - name: Build
       run: msbuild Syn2Controller.Windows\Syn2Controller.Windows.csproj /nologo /p:platform="Any CPU" /p:Configuration=Release /t:Build /p:OutputPath=..\artifacts
       shell: pwsh
+
+    - name: Zip Files
+      uses: vimtor/action-zip@v1
+      with:
+        files: artifacts/
+        dest: Syn2Controller.zip
+
+    - name: GH Release
+      uses: softprops/action-gh-release@v0.1.5
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        body: Release
+        name: Syn2Controller (${{ env.GITHUB_RUN_ID }})
+        draft: true
+        files: Syn2Controller-${{ env.GITHUB_RUN_ID }}.zip
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3.1.0
